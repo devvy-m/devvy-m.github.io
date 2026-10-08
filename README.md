@@ -5,12 +5,23 @@ requests. It exists to serve three things the App Store and AdMob require:
 
 | File | Required by | App Store Connect field |
 |---|---|---|
-| `privacy.html` | Apple, for every app | Privacy Policy URL |
-| `support.html` | Apple | Support URL |
-| `app-ads.txt` | AdMob and LevelPlay | (the site root goes in **Marketing URL**) |
+| `pizza-cutter/privacy.html` | Apple, for every app | Privacy Policy URL |
+| `pizza-cutter/support.html` | Apple | Support URL |
+| `pizza-cutter/index.html` | AdMob, as the developer website | Marketing URL |
+| `app-ads.txt` | AdMob and LevelPlay | — (must stay at the domain root) |
 
-`index.html` is what AdMob shows as "Developer Website" at the bottom of the app's page, so it
-is a real page rather than a redirect.
+The root `index.html` is a small landing page listing the games; it is **not** one of Pizza
+Cutter's registered URLs, so it can change freely. Each game owns a folder, and that folder's
+page is what AdMob shows as "Developer Website" at the bottom of the app's page.
+
+```
+/                            landing page, lists games (free to change)
+/app-ads.txt                 shared by ALL apps on this domain; must stay here
+/style.css
+/pizza-cutter/               <- Marketing URL
+/pizza-cutter/privacy.html   <- Privacy Policy URL
+/pizza-cutter/support.html   <- Support URL
+```
 
 Published at **https://devvy-m.github.io/** — a repository named exactly `<user>.github.io`
 publishes at the domain root, which is what puts `app-ads.txt` at `/app-ads.txt`.
@@ -40,8 +51,8 @@ The decision record and the reasoning behind all of this live in the game reposi
 
 ## Adding a second game later
 
-The site is deliberately flat: Pizza Cutter's pages sit at the root, because it is the only
-game (Devon, 8 October 2026). That does not block a second one.
+The site is structured for this from the start (Devon, 8 October 2026): each game owns a folder,
+so a second one is a new folder and nothing moves.
 
 - **`app-ads.txt` stays at the root, and is shared by every app.** AdMob reads only the *domain*
   from an app's Marketing URL and looks for `/app-ads.txt` there, so one file serves all your
@@ -51,9 +62,9 @@ game (Devon, 8 October 2026). That does not block a second one.
 - **Give each new game its own folder**: `/next-game/privacy.html`, `/next-game/support.html`,
   and `/next-game/` as that app's Marketing URL. Paths are ignored by AdMob's crawler, so a
   subfolder Marketing URL still resolves `app-ads.txt` at the root.
-- **Leave Pizza Cutter's URLs where they are.** Its three URLs are printed into App Store
+- **Never move a game's pages once its version is live.** Those URLs are printed into App Store
   Connect, and at minimum the Marketing URL cannot be changed without submitting a new app
-  version. Moving pages to tidy up the structure is not worth a release.
+  version. This layout exists so that never becomes necessary.
 - Turning `/` into a studio landing page that lists games is free at any time — it is not one of
   the three registered URLs for Pizza Cutter, only the Marketing URL's domain matters.
 
