@@ -38,6 +38,25 @@ The decision record and the reasoning behind all of this live in the game reposi
    when a new version is submitted**, so a move to a custom domain after launch needs an app
    update to go with it.
 
+## Adding a second game later
+
+The site is deliberately flat: Pizza Cutter's pages sit at the root, because it is the only
+game (Devon, 8 October 2026). That does not block a second one.
+
+- **`app-ads.txt` stays at the root, and is shared by every app.** AdMob reads only the *domain*
+  from an app's Marketing URL and looks for `/app-ads.txt` there, so one file serves all your
+  apps — Google's page notes that a crawl "updates the status for all apps that share the same
+  app-ads.txt file". The AdMob and ironSource publisher lines are account-level, so they are
+  already correct for a future game. A new game only adds lines if it uses a new ad network.
+- **Give each new game its own folder**: `/next-game/privacy.html`, `/next-game/support.html`,
+  and `/next-game/` as that app's Marketing URL. Paths are ignored by AdMob's crawler, so a
+  subfolder Marketing URL still resolves `app-ads.txt` at the root.
+- **Leave Pizza Cutter's URLs where they are.** Its three URLs are printed into App Store
+  Connect, and at minimum the Marketing URL cannot be changed without submitting a new app
+  version. Moving pages to tidy up the structure is not worth a release.
+- Turning `/` into a studio landing page that lists games is free at any time — it is not one of
+  the three registered URLs for Pizza Cutter, only the Marketing URL's domain matters.
+
 ## Editing
 
 Plain HTML and one stylesheet. `style.css` carries the game's palette from the design system
