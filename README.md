@@ -20,12 +20,12 @@ The decision record and the reasoning behind all of this live in the game reposi
 
 ## Still to do
 
-1. **`app-ads.txt` is half done.** AdMob's line and the IAB `ownerdomain` field are in.
-   LevelPlay still needs two things, both noted in the file itself: the `ironsrc.com, <publisher
-   id>, DIRECT` line (the publisher id is in the ironSource platform under avatar → Account →
-   API tab → Publisher ID, not in the LevelPlay app dashboard), and ironSource's
-   authorised-resellers block from
-   <https://docs.unity.com/en-us/grow/programmatic/ironsource-exchange/app-ads-txt>.
+1. **Re-check `app-ads.txt` periodically.** It is complete as of 8 October 2026: the AdMob
+   DIRECT line, the ironSource DIRECT line (publisher id 689029), the IAB `ownerdomain` field,
+   and ironSource's 125 authorised-reseller lines. **Unity updates that reseller list from time
+   to time** — re-copy it from
+   <https://docs.unity.com/en-us/grow/programmatic/ironsource-exchange/app-ads-txt> now and then,
+   and whenever an ad network is added or removed in LevelPlay.
 2. **Recheck the privacy policy against the shipped build.** It is written for the SDKs decided
    as of 8 October 2026: Unity LevelPlay, Google AdMob, Google UMP, Unity IAP and Apple's ATT
    prompt. Analytics, crash reporting and remote config were still *Suggested*, not decided, and
