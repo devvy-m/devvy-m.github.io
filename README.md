@@ -20,11 +20,12 @@ The decision record and the reasoning behind all of this live in the game reposi
 
 ## Still to do
 
-1. **`app-ads.txt` is not here yet.** It needs the real AdMob publisher line, which AdMob gives
-   under **Apps → View all apps → app-ads.txt**, plus LevelPlay's lines from its dashboard.
-   `app-ads.txt.template` has the shape; fill it in and rename it to `app-ads.txt`. Do not
-   publish a placeholder: a live `app-ads.txt` that lists no valid seller tells crawlers nobody
-   is authorised to sell this app's inventory.
+1. **`app-ads.txt` is half done.** AdMob's line and the IAB `ownerdomain` field are in.
+   LevelPlay still needs two things, both noted in the file itself: the `ironsrc.com, <publisher
+   id>, DIRECT` line (the publisher id is in the ironSource platform under avatar → Account →
+   API tab → Publisher ID, not in the LevelPlay app dashboard), and ironSource's
+   authorised-resellers block from
+   <https://docs.unity.com/en-us/grow/programmatic/ironsource-exchange/app-ads-txt>.
 2. **Recheck the privacy policy against the shipped build.** It is written for the SDKs decided
    as of 8 October 2026: Unity LevelPlay, Google AdMob, Google UMP, Unity IAP and Apple's ATT
    prompt. Analytics, crash reporting and remote config were still *Suggested*, not decided, and

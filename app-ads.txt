@@ -2,10 +2,25 @@
 # Authorised sellers of this app's ad inventory (IAB Tech Lab app-ads.txt spec).
 # Format: <exchange domain>, <publisher id>, DIRECT|RESELLER, <certification authority id>
 
-# Google AdMob
+# Publisher transparency (IAB OwnerDomain). Unity requires this field.
+ownerdomain=devvy-m.github.io
+
+# --- Google AdMob ---------------------------------------------------------
 google.com, pub-5990131839461545, DIRECT, f08c47fec0942fa0
 
-# Unity LevelPlay — NOT YET ADDED.
-# LevelPlay publishes its own set of lines in the dashboard; copy every one of
-# them in here, unchanged, below this comment. Until they are here, only Google
-# is an authorised seller and LevelPlay's other demand partners may not fill.
+# --- Unity LevelPlay / ironSource ------------------------------------- TODO
+# Two things are still missing here:
+#
+# 1. The DIRECT line. Format is:  ironsrc.com, <publisher id>, DIRECT
+#    Find the publisher id: log in to the ironSource platform, click the
+#    account/profile avatar at the bottom left, choose Account, open the API
+#    tab, and read the Publisher ID section.
+#
+# 2. ironSource's authorised-resellers block. Unity publishes a text block of
+#    its own entries to paste in whole, on the App-Ads.txt page under
+#    "ironSource authorized resellers":
+#    https://docs.unity.com/en-us/grow/programmatic/ironsource-exchange/app-ads-txt
+#    Unity updates that list from time to time, so re-check it occasionally.
+#
+# Until both are here, Google is the only authorised seller and LevelPlay's
+# other demand partners may not fill.
