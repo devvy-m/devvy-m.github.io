@@ -1,0 +1,11 @@
+# app-ads.txt — Pizza Cutter: Cozy Slices
+# Authorised sellers of this app's ad inventory (IAB Tech Lab app-ads.txt spec).
+# Format: <exchange domain>, <publisher id>, DIRECT|RESELLER, <certification authority id>
+
+# Google AdMob
+google.com, pub-5990131839461545, DIRECT, f08c47fec0942fa0
+
+# Unity LevelPlay — NOT YET ADDED.
+# LevelPlay publishes its own set of lines in the dashboard; copy every one of
+# them in here, unchanged, below this comment. Until they are here, only Google
+# is an authorised seller and LevelPlay's other demand partners may not fill.
