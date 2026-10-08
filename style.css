@@ -1,0 +1,181 @@
+/* Pizza Cutter site — colours from docs/design/design-system.md.
+   No external requests: no web fonts, no scripts, no analytics. */
+
+:root {
+  --paper: #FCEDD0;
+  --paper-mid: #F6E1BC;
+  --paper-dark: #EFD2A6;
+  --ink: #1C1B33;
+  --navy: #12091E;
+  --tomato: #D42A2F;
+  --dark-red: #B81F26;
+  --cream: #FFF3D6;
+  --basil: #1F7A3A;
+  --gold: #F2B233;
+  --muted: #6B6880;
+}
+
+* { box-sizing: border-box; }
+
+html {
+  background: var(--paper-dark);
+}
+
+body {
+  margin: 0;
+  padding: 2rem 1.25rem 4rem;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: ui-rounded, "Avenir Next", "Segoe UI", system-ui, -apple-system, sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  -webkit-text-size-adjust: 100%;
+}
+
+.wrap {
+  max-width: 44rem;
+  margin: 0 auto;
+}
+
+header.site {
+  border-bottom: 3px solid var(--navy);
+  padding-bottom: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+header.site .eyebrow {
+  margin: 0;
+  font-size: 0.8125rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--dark-red);
+  font-weight: 700;
+}
+
+h1 {
+  font-size: clamp(1.75rem, 6vw, 2.5rem);
+  line-height: 1.15;
+  margin: 0.35rem 0 0;
+  color: var(--tomato);
+  text-shadow: 0 2px 0 var(--paper-dark);
+}
+
+h2 {
+  font-size: 1.25rem;
+  margin: 2.5rem 0 0.5rem;
+  color: var(--dark-red);
+  border-bottom: 2px solid var(--paper-dark);
+  padding-bottom: 0.3rem;
+}
+
+h3 {
+  font-size: 1.0625rem;
+  margin: 1.75rem 0 0.35rem;
+  color: var(--navy);
+}
+
+p, ul, ol { margin: 0.75rem 0; }
+ul, ol { padding-left: 1.35rem; }
+li { margin: 0.35rem 0; }
+
+a {
+  color: var(--basil);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
+}
+a:hover { color: var(--tomato); }
+
+.lede {
+  font-size: 1.1875rem;
+  color: var(--ink);
+}
+
+.meta {
+  font-size: 0.9375rem;
+  color: var(--muted);
+  margin-top: 0.5rem;
+}
+
+.card {
+  background: var(--paper-mid);
+  border: 3px solid var(--navy);
+  border-radius: 0;
+  box-shadow: 4px 4px 0 var(--paper-dark);
+  padding: 1.25rem 1.4rem;
+  margin: 1.5rem 0;
+}
+
+.card h2, .card h3 { margin-top: 0; border: 0; padding: 0; }
+
+.cta {
+  display: inline-block;
+  background: var(--tomato);
+  color: var(--cream);
+  border: 3px solid var(--navy);
+  box-shadow: 4px 4px 0 var(--navy);
+  padding: 0.6rem 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin: 0.4rem 0.5rem 0.4rem 0;
+}
+.cta:hover { background: var(--dark-red); color: var(--cream); }
+.cta.alt { background: var(--basil); }
+.cta.alt:hover { background: #17602C; }
+
+code, .email {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.9375em;
+  background: var(--paper-dark);
+  padding: 0.1em 0.35em;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: 0.9375rem;
+}
+th, td {
+  text-align: left;
+  vertical-align: top;
+  padding: 0.5rem 0.65rem;
+  border: 2px solid var(--paper-dark);
+}
+th {
+  background: var(--paper-mid);
+  color: var(--navy);
+}
+
+.table-scroll { overflow-x: auto; }
+
+footer.site {
+  margin-top: 3.5rem;
+  padding-top: 1.25rem;
+  border-top: 3px solid var(--navy);
+  font-size: 0.9375rem;
+  color: var(--muted);
+}
+
+footer.site nav a { margin-right: 1rem; }
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #221A2E;
+    --paper-mid: #2C2238;
+    --paper-dark: #150F1F;
+    --ink: #F3E6CE;
+    --cream: #FFF3D6;
+    --tomato: #F2605F;
+    --dark-red: #F28B86;
+    --basil: #6CC274;
+    --muted: #A9A2BC;
+    --navy: #0B0613;
+  }
+  html { background: var(--paper-dark); }
+  h1 { text-shadow: none; }
+  .cta { background: var(--tomato); color: #20121B; }
+  .cta.alt { background: var(--basil); color: #10210F; }
+  code, .email { background: var(--paper-mid); }
+}
