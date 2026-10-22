@@ -9,6 +9,7 @@
 #                     Unity updates this list from time to time. Re-check it periodically.
 #   Unity Ads lines — Unity dashboard, Monetization > Settings > Organization > App-ads.txt
 #                     (read 12 October 2026). Unity asks for this list to be re-checked monthly.
+#   Liftoff line    — Liftoff Monetize dashboard, Add Application validation (read 22 October 2026).
 
 # Publisher transparency (IAB OwnerDomain). Unity requires this field.
 ownerdomain=devvy-m.github.io
@@ -17,6 +18,7 @@ ownerdomain=devvy-m.github.io
 google.com, pub-5990131839461545, DIRECT, f08c47fec0942fa0
 ironsrc.com, 689029, DIRECT
 unity.com, 6135713, DIRECT, 96cabb5fbdde37a7
+vungle.com, 6ada5cfe432de742530a0019, DIRECT, c107d686becd2d77
 
 # --- ironSource authorised resellers ----------------------------------------
 media.net, 8CUH2L333, RESELLER
