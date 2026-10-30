@@ -189,3 +189,33 @@ footer.site nav a { margin-right: 1rem; }
   .card { box-shadow: 4px 4px 0 #19121F; }
   code, .email { background: var(--paper-mid); }
 }
+
+/* Press kit: images. */
+.shot-wide {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 3px solid var(--rule);
+  box-shadow: 4px 4px 0 var(--paper-dark);
+  image-rendering: pixelated;
+}
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+  gap: 0.9rem;
+  margin: 1rem 0;
+}
+.gallery img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 3px solid var(--rule);
+  image-rendering: pixelated;
+}
+
+/* Draft placeholders: anything still to fill in before the page is linked. */
+.todo {
+  background: var(--gold);
+  color: #20121B;
+  padding: 0 0.3em;
+}

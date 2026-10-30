@@ -1,0 +1,33 @@
+PIZZA CUTTER: COZY SLICES - PRESS FACT SHEET
+
+Developer:     Devon Marshall (solo developer)
+Based in:      Florida, USA
+Platform:      iPhone (iOS)
+Release date:  22 October 2026
+Price:         Free. Ads between runs; CONTINUE and PEEK are optional rewarded ads.
+               The optional Supporter Pack removes the ads between runs and adds the Golden Wheel cutter.
+               Seven cosmetic themes, sold one by one or as a bundle.
+Genre:         Casual arcade / puzzle
+App Store:     https://apps.apple.com/app/id6819419063
+Press page:    https://devvy-m.github.io/pizza-cutter/press/
+Contact:       tailbytesupport@gmail.com
+
+TINY (about 150 characters)
+A cozy pixel-art pizzeria on iPhone where one swipe cuts the pizza. Three modes, a daily shape
+puzzle and cutters to earn. Free on the App Store.
+
+SHORT (about 70 words)
+Pizza Cutter: Cozy Slices is a pixel-art pizzeria on iPhone where one swipe cuts the pizza. Halve
+pizzas racing down a conveyor belt in Slice Rush, give every topping its own slice in Endless Shift,
+and cut a new set of shapes in the Daily Special, the same ten orders for everyone. Short runs,
+cutters to earn, and Game Center leaderboards. Free on the App Store, made by a solo developer.
+
+ABOUT THE DEVELOPER
+Pizza Cutter: Cozy Slices is the first game from Devon Marshall, a software engineer turned solo
+developer in Florida. The idea came from her husband, who asked one day, "What about a game where
+you endlessly cut pizzas?" Devon did everything else: the code, the design, the game flow, and every
+pizza in between. It's the first step toward a small family studio, built on the ideas the two of
+them dream up together. When she isn't making games, you'll find her cooking, playing games,
+or out walking with her two dogs.
+
+Everything in this kit is free to use in coverage of the game.
